@@ -1,15 +1,13 @@
-//Overloading Constructor is not allowed in dart
-
+//constructor overloading is not allowed in dart
 class Example {
   int a, b, c;
 
-  Example(this.a, {this.b = 55, this.c});
-
+  Example(this.a, this.b);
   //the arguments whose position CAN'T be changed are knwon as POSITIONAL ARGUMENTS
   //the arguments whose position/order can be changed and can be provided values by naming them are knwon as NAMED ARGUMENTS
   //named arguments are written within {}curly braces
-  //default values can be provided to both
-
+  //default values can be provided to named parameters only
+  
   @override
   String toString() {
     return '$a * $b * $c';
@@ -17,7 +15,7 @@ class Example {
 }
 
 void main() {
-  var obj = Example(5, b: 20);
+  var obj = Example(5, 20);
   //cannot do a:45, the first argument has to be 'a'
   //default value is null irrespective of data type
   print(obj);
