@@ -1,0 +1,22 @@
+class Example {
+  int a, b, c;
+
+  Example(this.a, {this.b = 55, this.c});
+
+  //the arguments whose position CAN'T be changed are knwon as POSITIONAL ARGUMENTS
+  //the arguments whose position/order can be changed and can be provided values by naming them are knwon as NAMED ARGUMENTS
+  //named arguments are written within {}curly braces
+  //default values can be provided to both
+
+  @override
+  String toString() {
+    return '$a * $b * $c';
+  }
+}
+
+void main() {
+  var obj = Example(5, b: 20);
+  //cannot do a:45, the first argument has to be 'a'
+  //default value is null irrespective of data type
+  print(obj);
+}
